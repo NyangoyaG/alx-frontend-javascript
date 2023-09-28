@@ -1,11 +1,9 @@
-export default function taskBlock(trueOrFalse) {
-  let task = false;
-  let task2 = true;
+export default function getNeighborhoodsList() {
+  this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
-  if (trueOrFalse) {
-    task = true;
-    task2 = false;
-  }
-
-  return [task, task2];
+  const self = this;
+  this.addNeighborhood = function add(newNeighborhood) {
+    self.sanFranciscoNeighborhoods.push(newNeighborhood);
+    return self.sanFranciscoNeighborhoods;
+  };
 }
