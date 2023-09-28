@@ -1,13 +1,7 @@
-// 0-classroom.js - Define the ClassRoom class and export it
-export default class ClassRoom {
-  constructor(maxStudentsSize) {
-    this._maxStudentsSize = maxStudentsSize;
-  }
-}
-
-// main.js - Import the ClassRoom class and implement initializeRooms
+// Import the ClassRoom class from 0-classroom.js
 import ClassRoom from './0-classroom.js';
 
+// Implement the initializeRooms function
 function initializeRooms() {
   const room1 = new ClassRoom(19);
   const room2 = new ClassRoom(20);
@@ -18,5 +12,4 @@ function initializeRooms() {
 
 // Usage example
 const rooms = initializeRooms();
-console.log(rooms); // This will print the array of ClassRoom objects to the console.
-
+console.log(rooms); // This will print the array of ClassRoom objects to the console
