@@ -1,10 +1,11 @@
 export default class Currency {
+  /* eslint-disable */
   constructor(code, name) {
-    this._code = code;
-    this._name = name;
+  this._code = code;
+  this._name = name;
   }
-
-  // Getter methods
+  
+  // getter
   get code() {
     return this._code;
   }
@@ -13,17 +14,17 @@ export default class Currency {
     return this._name;
   }
 
-  // Setter methods
-  set code(newCode) {
-    this._code = newCode;
+  // setter
+  set code(Code) {
+    this._code = Code;
   }
 
-  set name(newName) {
-    this._name = newName;
+  set name(Name) {
+    this._name = Name;
   }
 
-  // Method to display full currency
+  // method 
   displayFullCurrency() {
-    console.log(`${this._name} (${this._code})`);
+    return `${this._name} (${this._code})`;
   }
 }
