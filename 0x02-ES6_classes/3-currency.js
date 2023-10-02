@@ -27,15 +27,3 @@ export default class Currency {
     console.log(`${this._name} (${this._code})`);
   }
 }
-
-// Example usage:
-const currency = new Currency('USD', 'US Dollar');
-
-console.log(currency.code); // 'USD'
-console.log(currency.name); // 'US Dollar'
-
-currency.name = 'Euro'; // Setter for name
-console.log(currency.name); // 'Euro'
-
-currency.displayFullCurrency(); // Output: 'Euro (USD)'
-
