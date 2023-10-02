@@ -1,0 +1,55 @@
+class HolbertonCourse {
+  constructor(name, length, students) {
+    this._name = this.validateName(name);
+    this._length = this.validateLength(length);
+    this._students = this.validateStudents(students);
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(newName) {
+    this._name = this.validateName(newName);
+  }
+
+  get length() {
+    return this._length;
+  }
+
+  set length(newLength) {
+    this._length = this.validateLength(newLength);
+  }
+
+  get students() {
+    return this._students;
+  }
+
+  set students(newStudents) {
+    this._students = this.validateStudents(newStudents);
+  }
+
+  validateName(name) {
+    if (typeof name === 'string') {
+      return name;
+    } else {
+      throw new Error('Name must be a string');
+    }
+  }
+
+  validateLength(length) {
+    if (typeof length === 'number') {
+      return length;
+    } else {
+      throw new Error('Length must be a number');
+    }
+  }
+
+  validateStudents(students) {
+    if (Array.isArray(students) && students.every((student) => typeof student === 'string')) {
+      return students;
+    } else {
+      throw new Error('Students must be an array of strings');
+    }
+  }
+}
